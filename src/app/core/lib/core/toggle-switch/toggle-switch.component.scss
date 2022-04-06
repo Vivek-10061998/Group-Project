@@ -1,0 +1,73 @@
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+
+
+:host ::ng-deep .jds-toggle {
+  display: inline-flex;
+  align-items: center;
+
+  .large{
+    font-size: 1.85rem;
+  }
+
+  .toggle-label{
+    font-size: 0.85rem;
+    padding-left: 0.75rem;
+  }
+
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    margin-bottom: 0;
+
+    input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider {
+        background-color: $positive-100;
+      }
+      &:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+      
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $neutral-40;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 15px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $neutral-0;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+      }
+    }
+
+
+  }
+
+}
+

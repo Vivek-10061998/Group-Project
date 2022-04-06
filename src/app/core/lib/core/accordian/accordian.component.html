@@ -1,0 +1,13 @@
+<div class="jds-accordian">
+    <div class="jds-accordian-block">
+
+        <div class="jds-accordian-header">
+            <ng-content select="accordian-header"></ng-content>
+            <em [ngClass]="{'open':expanded}" class="bi bi-chevron-down acc-btn " (click)="expanded=!expanded"></em>
+        </div>
+        <div class="jds-accordian-body" *ngIf="expanded">
+            <ng-content select="accordian-body"></ng-content>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "production": false,
+  "baseUrl": "/",
+  "loginUrl": "/user",
+  "commonsUrl": "/commons",
+  "supplierOnboardingUrl": "/supplieronboarding",
+  "supplierDashboardUrl": "/supplierdashboard",
+  "profilePortalUrl": "/supplierprofile",
+  "menuList": [],
+  "urlsToBeMasked": [],
+  "usersWhoCanUtilizeMasking": [],
+  "displaySearch": false,
+  "elasticapm": {
+    "apmUrl": "/apmrum/",
+    "serverUrl": "https://hcpelk.ril.com",
+    "serviceName": "RPNC_AJ_MeasurementSheet",
+    "platform": "PNC",
+    "sub_platform": "WellSpent",
+    "application": "RPNC_AJ_MeasurementSheet",
+    "geoApiUrl": "https://locationapi.ril.com/geolocation/loc-by-ip",
+    "initialPageLoadName": "RPNC_AJ_MeasurementSheet",
+    "serviceVersion": "1.0",
+    "component_name": "MeasurementSheet",
+    "sub_application": "MeasurementSheet",
+    "component_type": "UI",
+    "is_error": "false"
+  }
+}

@@ -1,0 +1,11 @@
+<div class="dialog-bg dialog-show">
+    <div class="dialog-container" [style.width]="width" [style.height]="height">
+        <span class="dialog-close" (click)="closeDialog()">
+            <em class="bi bi-x"></em>
+        </span>
+        <ng-container cdkPortalOutlet #portal>
+            <ng-content select="modal-content"></ng-content>
+        </ng-container>
+
+    </div>
+</div>

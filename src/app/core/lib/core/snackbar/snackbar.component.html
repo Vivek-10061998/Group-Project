@@ -1,0 +1,9 @@
+<div class="snackbar-block" *ngIf="show">
+    <div class="jds-snackbar" [@showHide]>
+        <div>
+            {{message}}
+        </div>
+        <button type="button" class="r-btn-outlined r-btn-small r-btn-rounded"
+            (click)="onSnackbarClose()">Close</button>
+    </div>
+</div>

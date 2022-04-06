@@ -1,0 +1,57 @@
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+
+
+:host ::ng-deep .jds-accordian {
+  transition: none;           //added ad a filler
+
+  .jds-accordian-block{
+    transition: none;         //added ad a filler
+    
+    .jds-accordian-header{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $neutral-40;
+      padding: 0.5rem 3rem 0.5rem 1rem;
+      // cursor: pointer;
+
+      accordian-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.5;
+      }
+      .acc-btn {
+        font-size: 1rem;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        margin-top: -12px;
+        transition: all 0.5s ease-in;
+        color: $secondary-100;
+        cursor: pointer;
+
+        &.open{
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .jds-accordian-body{
+      padding: 1rem;
+    }
+
+  }
+
+}
+

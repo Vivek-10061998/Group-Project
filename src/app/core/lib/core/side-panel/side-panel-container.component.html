@@ -1,0 +1,10 @@
+<div>
+    <div class="jds-slider-bg" (click)="closeDialog()"></div>
+    <div class="jds-slider" [style.width]="width">
+        <button *ngIf="!disableClose" class="jds-slider-close" (click)="closeDialog()">
+            <em class="bi bi-x"></em>
+        </button>
+        <ng-container cdkPortalOutlet #portal>
+        </ng-container>
+    </div>
+</div>

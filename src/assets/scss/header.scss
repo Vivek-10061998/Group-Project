@@ -1,0 +1,153 @@
+.header-fixed .jds-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+}
+
+
+.jds-header {
+  display: flex;
+  flex-grow: 1;
+  background-color: $secondary-100;
+  color: $neutral-0;
+  padding-right: $layout-space-lg;
+
+  button {
+    outline: none;
+    border: none;
+  }
+
+  .header-menu-button {
+    background: $primary-100; 
+    color: $neutral-0;  
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0;
+    justify-content: center;
+    cursor: pointer;
+
+    .icon-section{
+      fill: $neutral-0;
+      width: 1.25rem;
+      margin-top: -5px;
+    }
+  }
+
+  .logo-text{
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    font-size: 1.25rem;
+    color: $neutral-0;
+    cursor: pointer;
+  }
+
+  .header-rhs-btn {
+    color: $neutral-0;
+    background: $secondary-100;
+    width: 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    
+    .icon-section{
+      width: 1.25rem;
+      fill: #fff;
+      margin: auto;
+    }
+  }
+  
+  .login-details{
+    width: 3.25rem;
+    background: $secondary-100;
+    display: flex;
+    align-items: center;
+
+    .initials-here{
+      background: $neutral-0;
+      color: $secondary-100;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.25rem;
+      line-height: 40px;
+      text-align: center;
+    }
+    
+  }
+
+  .header-search-container{
+    position: relative;   
+    display: flex;
+    align-items: center;
+    padding: 0 $layout-space-sm;
+
+    .header-search{
+      background:  $neutral-0;
+      color: $neutral-70;
+      border: 1px solid $neutral-0;
+      border-radius: $radius-s;
+      height: $size-primitive-xl;
+      padding: 0 $space-pattern-sm 0 2rem ;
+      width: 16rem;
+      outline:0;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+    .bi{
+      color: $neutral-70;;
+      z-index: 2;
+      margin-right: -1.5rem;
+    }
+  }
+}
+
+.jds-header-dropdown{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 110;
+  background: transparent;
+  height: 100vh;
+  border-radius: 4px;
+
+  .jds-header-menu{
+    position: fixed;
+    top: 65px;
+    right: 2rem;
+    background: $neutral-0;
+    box-shadow: 0 0 11px 2px rgba(0 ,0, 0, 0.23);
+    max-width: 12rem;  
+  }
+  &.hideMe{
+    display: none;
+    z-index: -2;
+  }
+}
+
+// Xtra Small devices (feature phones, 240px and up)
+@media (min-width: 240px) { 
+  .jds-header{
+    height: 56px;
+  }
+  .jds-header .header-menu-button {
+    width:56px
+  }
+
+
+ }
+
+
+// Xtra Large devices (desktops, 1260 and up)
+@media (min-width: 1260px) { 
+  .jds-header{
+    height: 64px;
+  }
+  .jds-header .header-menu-button {
+    width:64px
+  }  
+
+ }

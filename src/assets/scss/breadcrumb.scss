@@ -1,0 +1,42 @@
+
+.jds-breadcrumb{
+  display: block;
+  margin-top: -0.125rem;
+  display: block;
+  padding-bottom: 0.5rem;
+
+  .jds-breadcrumb-link{
+    color: $secondary-100;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+
+    &:hover{
+      color: $secondary-110;
+    }
+
+    &::after{
+      content: ">";
+      position: absolute;
+      top: 0;
+      right: -1rem;
+      color: $secondary-100 !important;
+      cursor: initial;
+    }
+
+    &:nth-last-child(1){
+      // color: $neutral-70;       
+      pointer-events: none;
+      cursor: inherit;
+      font-weight: 400;
+
+      &::after{
+        display: none;
+      }
+    }
+  }
+}

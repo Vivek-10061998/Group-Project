@@ -1,0 +1,45 @@
+@import '../shared/scss/variables';
+@import '../shared/scss/variables2';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/mixins';
+
+:host ::ng-deep .jds-card {
+  box-sizing: border-box;
+  background: $card-background;
+  // display: flex;
+  flex-direction: column;
+  // margin:5px;
+  padding:1rem;
+  
+  &.box-shadow,&.hover-shadow{@include box-shadow;}
+  &.hover-shadow:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+  &.bordered {
+    border: 1px solid #dee2e6 ;
+  }
+  &.solid {
+    border-style:solid;
+  }
+  &.dotted {
+    border-style: dotted;
+  }
+  &.dashed {
+    border-style:dashed;
+  }
+}
+.jds-secondary-header{
+  background: $secondary-100;
+  color: $neutral-0;
+  padding: $space-pattern-sm $space-pattern-lg;
+  // margin-bottom: $space-pattern-sm; 
+  border-radius: $radius-s $radius-s 0 0;
+}
+.jds-card-body{
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #dee2e6!important;
+}
