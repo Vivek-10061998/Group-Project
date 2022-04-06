@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/main.scss' ;
+
+body {
+    font-family: Roboto ,  Helvetica, sans-serif;
+    font-weight: 400;
+    background: $neutral-10;
+    padding: 0;
+    margin: 0;
+    color: $base-text-color;
+}
+.grow-1 {
+    flex-grow: 1;
+}
+.medium{
+  font-weight: 400;
+}
+.bold{
+  font-weight: 500;
+}
+.bolder{
+  font-weight: bold;
+}
+.no-underline{
+    text-decoration: none !important;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.full-width{ 
+  width:100%;
+}
+.dashed-breaker{
+  border-top: 1px dashed $neutral-50; 
+  min-height: 1px ;
+}
+.border-none{
+  border: none !important;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+.text-dot{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.make-relative{
+  position: relative;
+}
+
+//Spinner fixed class
+.ngx-spinner-overlay {
+    position: fixed !important;
+}
+/* Scrollbar custom STARTS -----------------------*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  
+  /* Track */
+  
+  ::-webkit-scrollbar-track {
+    background: #e8e8e8;
+  }
+  
+  
+  /* Handle */
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    min-height: 45px;
+  }
+  
+  
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  /* Scrollbar custom ENDS ------------------------*/
+
+
+ 
+.jds-card{
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.jds-split-page{
+  position: relative;
+  display: flex;
+
+  .jds-split-lhs{
+    flex-grow: 1;
+  }
+
+  .jds-split-rhs{
+    width: 230px;
+    padding-left: 1.5rem;
+  }
+}
+
+.mock-icon-btn{
+  font-size: 1.125rem;
+  cursor: pointer;
+}

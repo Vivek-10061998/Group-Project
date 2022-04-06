@@ -1,0 +1,112 @@
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+
+
+:host ::ng-deep .jds-tab{
+  position: relative;
+  background: $neutral-0;
+  border-radius: $radius-s;
+
+  .jds-tab-header-block{
+    display: block;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.15);
+    border-radius: $radius-s $radius-s 0 0;
+
+    .jds-tab-header {      
+      position: relative;
+      padding: 0.25rem 1rem 0;
+      font-weight: 300;
+      display: inline-block;
+      cursor: pointer;
+
+      &:nth-child(1){
+        position: relative;  
+
+        &::before{
+          display: none;
+        }
+      }
+      
+
+      &.selected{
+        background: $neutral-0;
+        font-weight: 500;        
+
+        &::after{
+          right: 0rem;
+          content: "";
+          width: 0.75rem;
+          background: #fff;
+          transform: skew(20deg);
+          position: absolute;
+          top: 0;
+          height: calc(100% + 2px);
+          border-radius: 0 4px;
+          box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.15);
+          border-bottom: 2px solid $neutral-0;
+        }
+        &::before{
+          left: 0rem;
+          content: "";
+          width: 0.75rem;
+          background: #fff;
+          transform: skew(-20deg);
+          position: absolute;
+          top: 0;
+          height: calc(100% + 2px);
+          border-radius: 4px 0;
+          box-shadow: -2px 0px 3px 0px rgba(0, 0, 0, 0.15);
+          border-bottom: 2px solid $neutral-0;
+        }
+        .jds-header-text {
+          border-bottom: 2px solid $secondary-100;
+        }
+      }
+
+      .jds-header-text{
+        color: $secondary-100;
+        padding-bottom: 0.25rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .jds-tab-header-underline {
+    padding: 0.5rem 0rem 0;
+    white-space: nowrap;
+    overflow: auto;
+    border-bottom: 1px solid #d6d6d6;
+
+    .jds-tab-header {    
+      position: relative;
+      padding: 0.25rem 1rem 0;
+      font-weight: 300;
+      display: inline-block;
+      cursor: pointer;
+    &.selected{
+      // background: $neutral-0;
+      font-weight: 500;        
+      .jds-header-text {
+        border-bottom: 2px solid $secondary-100;
+      }
+    }
+
+    .jds-header-text{
+      color: $secondary-100;
+      padding-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+  }
+  }
+
+  .jds-tab-container{
+   box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.175);
+   padding: $layout-space-sm; 
+  }
+}

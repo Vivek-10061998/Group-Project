@@ -1,0 +1,250 @@
+//.menu-accordian                    add to menu-button for accordian
+// .selected                         add to menu-button for highlight
+// .selected                         add to sub-menu-btn fot highlight 
+
+.header-fixed .jds-navigation{
+  position: fixed;  
+  left: 0;
+  z-index: 100;
+}
+.jds-navigation{
+  width: 250px;
+  transition: width 0.5s ease-in-out;
+}
+.jds-navigation-container{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  background: $neutral-0;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.menu-button {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  border-left: 5px solid transparent;
+  font-size: 1rem;
+  min-height: 2.5rem;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0.25rem;
+
+  &:hover{
+    background: $neutral-10;
+  }
+
+  .expand-btn{
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 0.875rem;
+    transition: trasform 0.5s ease-in-out  ;
+  }
+
+  .menu-icon{
+    fill: $neutral-70;
+    color: $neutral-70;
+    width: 1.5rem;
+    position: absolute;
+    top: 2px;
+    font-size: 1.5rem;
+  }
+  .menu-txt {
+    color: $neutral-70;
+    font-weight: 300;
+    padding-left: 3.75rem;
+    visibility: visible;
+    transition: all 0.5s;
+  }
+
+  &.selected{
+    border-color: $primary-100;
+    background: $neutral-10; 
+
+    .menu-icon{
+      fill: $primary-100;
+      color: $primary-100;
+    }
+    .menu-txt {
+      color: $primary-100;
+      font-weight: 500;
+    }
+  }
+
+  &.menu-accordian{
+    padding-right: 1.75rem;
+
+    .expand-btn{
+      display: block;
+    }
+  }
+}
+
+//    Sub Menu Code
+
+.jds-sub-menu-block{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  background: $neutral-0;
+  margin: 0.25rem 0 0.5rem;
+
+  .sub-menu-btn{
+    display: flex;
+    padding-left: 64px;
+    font-size: 0.875rem;
+    color: $neutral-70;
+    align-items: center;
+    height: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover{
+      background: $neutral-10;
+    }
+
+    &.selected{
+      color: $primary-100;
+      font-weight: 400;
+    }
+
+    .my-icon{
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+//    MENU Stepper Code //////////
+
+.menu-close .menu-stepper-main{
+  display: none ;
+}
+.menu-stepper-main {
+  display: block;
+
+  .menu-stepper-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding: 0.25rem 0.75rem 0.25rem 0;
+
+    .circle-block {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: $neutral-0;
+      border: 1px solid $neutral-70;
+      position: absolute;
+      top: calc(50% - 0.5rem);
+      z-index: 2;
+    }
+
+    .menu-stepper-text{
+      font-size: 0.875rem;
+      margin-left: 2rem;
+      font-weight: 300;
+    }
+
+    .line-here{
+      position: absolute;
+      width: 1px;
+      background: $neutral-70;
+      height: calc(100% + 0.75rem);
+      top: 50%;
+      left: 0.5rem;
+      z-index: 1;
+  }
+
+  &.selected{
+    .circle-block{
+      border: 3px solid $primary-100;
+    }
+    .menu-stepper-text{
+      color: $primary-100;
+      font-weight: 400;
+    }
+  }
+
+  &.completed{
+    .circle-block{
+      border: 1px solid $positive-100;
+      background: $positive-100;
+    }
+  }
+
+
+  }
+}
+
+
+
+
+// Xtra Small devices (feature phones, 240px and up)
+@media (min-width: 240px) { 
+  .header-fixed .jds-navigation{
+    top: 56px;
+  } 
+  .jds-navigation-container{
+    height: calc(100vh - 56px);
+  } 
+  .menu-stepper-main{
+    margin-left: 56px;
+    margin-top: 1rem;
+  }
+  .menu-icon{
+    left: 0.75rem;
+  }
+  .menu-close{
+    .jds-navigation{
+        width: 56px;
+
+        .menu-txt,
+        .expand-btn {
+            display: none;
+            visibility: hidden;
+        }
+
+        .jds-sub-menu-block{
+          display: none;
+        }
+    }
+    
+  }
+
+
+
+}
+
+
+// Xtra Large devices (desktops, 1260 and up)
+@media (min-width: 1260px) { 
+  .header-fixed .jds-navigation{
+    top: 64px;
+  }
+  .jds-navigation-container{
+    height: calc(100vh - 64px);
+  } 
+  .menu-stepper-main{
+    margin-left: 64px;
+    
+  }
+  .menu-icon{
+    left: 1rem;
+  }
+  .menu-close .jds-navigation{
+        width: 64px;
+  }   
+    
+
+
+}

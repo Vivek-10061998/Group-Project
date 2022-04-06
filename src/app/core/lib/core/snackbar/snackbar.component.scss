@@ -1,0 +1,57 @@
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+
+:host ::ng-deep .snackbar-block{
+  position: fixed;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1100;
+  // display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  // pointer-events: none;
+}
+
+.snackbar-block.show {
+  display: flex;
+}
+
+.jds-snackbar{
+  padding:  $space-pattern-sm $space-pattern-sm $space-pattern-sm  $space-pattern-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-radius: $space-pattern-xs;
+  font-size: 14px;
+  background-color: $neutral-80;
+  color: $neutral-0;
+  max-width: 700px;
+  min-width: 260px;
+  min-height: $layout-space-xl;
+
+  div{
+    padding-right:  $space-pattern-sm;
+  }
+
+  .r-btn-outlined{
+    border-color: $neutral-0 !important;
+    color: $neutral-0 !important;
+    background: transparent !important;
+    margin-right: $space-pattern-sm;
+  }
+
+  &.success{
+    background: $positive-100;
+  }
+
+  &.danger{
+    background: $negative-100;
+  }
+
+}

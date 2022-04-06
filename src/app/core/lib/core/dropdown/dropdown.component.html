@@ -1,0 +1,24 @@
+<div class="dropdown-wrapper">
+  <label *ngIf="label">{{ label }} <span *ngIf="required"> *</span></label>
+  <div class="dropdown" [ngClass]="{'open':shown && list !== undefined ,'small':size=='small'}">
+    <div class="dropdown__btn" (click)="show()"><span>{{value || placeholder }}</span></div>
+    <div class="dropdown__dropdown">
+      <input *ngIf="hasSearch" class="dropdown__dropdown__search" type="text" [placeholder]="searchplaceholder"
+        [(ngModel)]="keyword" (keyup)="search(keyword)" #input />
+      <div class="dropdown__dropdown__scroller">
+        <div class="dropdown__dropdown__item" (click)="select('')">
+          {{placeholder}}
+        </div>
+        <div class="dropdown__dropdown__item" *ngFor="let item of list" (click)="select(item)">
+          <div class="dropdown__dropdown__item__multi" *ngIf="type=='multi'"> <input type="checkbox" /> </div>
+          <span *ngIf=" typeOf(item) == 'object'"> {{item[_labelField] }}</span>
+          <span *ngIf=" typeOf(item) == 'string' || typeOf(item) == 'number'"> {{item}}</span>
+        </div>
+        <div class="dropdown__dropdown__msg" *ngIf="list?.length == 0">No Result Found</div>
+      </div>
+    </div>
+  </div>
+  <span class="input-message" [ngClass]="state=='error' ? 'error-message':''">
+    <ng-content select="hint"></ng-content>
+  </span>
+</div>

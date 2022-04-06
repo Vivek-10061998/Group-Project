@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  "production": false,
+  "baseUrl": "https://pncplatformdev.ril.com/",
+  "loginUrl": "https://pncplatformdev.ril.com/user",
+  "appUrl": "https://pncplatformdev.ril.com/supplierportal",
+  "supplierOnboardingUrl": "https://pncplatformdev.ril.com/supplieronboarding",
+  "supplierDashboardUrl": "https://pncplatformdev.ril.com/supplierdashboard",
+  "profilePortalUrl": "https://pncplatformdev.ril.com/supplierprofile",
+  "menuList": [],
+  "urlsToBeMasked": [],
+  "usersWhoCanUtilizeMasking": [],
+  "displaySearch": false
 };
 
 /*

@@ -1,0 +1,203 @@
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+@import '../shared/scss/tooltip';
+$input-gray-bg: #F2F2F2 ;
+:host ::ng-deep .jds-input-block {
+  position: relative;
+  margin-bottom: $space-pattern-xxl;
+
+  label {
+    color: $secondary-100;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    margin-bottom: 0.25rem;
+
+    span{
+      color: $negative-100;
+    }
+  }
+  .jds-input-form, input {
+    height:  $size-component-md;
+    font-size: 1rem;
+    padding: 0 $space-pattern-sm;    
+    width: 100%;
+    border: 1px solid $neutral-40;
+    border-radius: $radius-xs;
+    outline: none;
+    color: $neutral-80;
+
+    &:hover{
+      border-color: $neutral-80;
+    }
+    &:focus,
+    &:active {
+      border-color: $secondary-100;
+    }
+
+    &.gray-bg{
+        background: $input-gray-bg;
+        border-color: $input-gray-bg ;
+      
+      &:hover{
+        border-color: $neutral-80;
+      }
+      &:focus,
+      &:active {
+        border-color: $secondary-100;
+      }
+
+      &:disabled {
+        background: $neutral-10;
+        border-color: $neutral-10 ;
+        color: $neutral-50;
+      }
+
+    }
+
+  }  
+
+  .input-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 0.775rem;
+    color: $neutral-70;
+
+    &.error-message{
+      color: $negative-100;
+    }
+  }
+
+  &.input-rhs-control{
+    transform: none;
+
+    .jds-input-form{
+      padding-right: 2.5rem;
+    }
+    .rhs-icon{
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem; 
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+:host ::ng-deep input {
+  color:red;
+}
+
+// :host {
+//   $input-gray-bg: #F2F2F2 ;
+//   &.jds-input-block {
+//     position: relative;
+//     margin-bottom: $space-pattern-xxl;
+  
+//     label {
+//       color: $secondary-100;
+//       font-size: 0.875rem;
+//       line-height: 1rem;
+//       margin-bottom: 0.25rem;
+  
+//       span{
+//         color: $negative-100;
+//       }
+//     }
+//     .jds-input-form{
+//       height:  $size-component-md;
+//       font-size: 1rem;
+//       padding: 0 $space-pattern-sm;    
+//       width: 100%;
+//       border: 1px solid $neutral-40;
+//       border-radius: $radius-xs;
+//       outline: none;
+//       color: $neutral-80;
+  
+//       &:hover{
+//         border-color: $neutral-80;
+//       }
+//       &:focus,
+//       &:active {
+//         border-color: $secondary-100;
+//       }
+  
+//       &.gray-bg{
+//           background: $input-gray-bg;
+//           border-color: $input-gray-bg ;
+        
+//         &:hover{
+//           border-color: $neutral-80;
+//         }
+//         &:focus,
+//         &:active {
+//           border-color: $secondary-100;
+//         }
+  
+//         &:disabled {
+//           background: $neutral-10;
+//           border-color: $neutral-10 ;
+//           color: $neutral-50;
+//         }
+  
+//       }
+  
+//     }  
+  
+//     .input-message {
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       font-size: 0.775rem;
+//       color: $neutral-70;
+  
+//       &.error-message{
+//         color: $negative-100;
+//       }
+//     }
+  
+//     &.input-rhs-control{
+//       transform: none;
+  
+//       .jds-input-form{
+//         padding-right: 2.5rem;
+//       }
+//       .rhs-icon{
+//         position: absolute;
+//         bottom: 0.5rem;
+//         right: 0.5rem;
+//         width: 1.5rem;
+//         height: 1.5rem; 
+//         display: flex;
+//         align-items: center;
+//         font-size: 1.25rem;
+//       }
+//     }
+//   }
+  
+  
+  
+//   .jds-otp-block{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+  
+//     .otp-input{
+//       height:  $size-component-md;
+//       width:  $size-component-md;
+//       font-size: 1rem;
+//       text-align: center;
+//       border: 1px solid $neutral-40;
+//       border-radius: $radius-xs;
+//       outline: none;
+//       color: $neutral-80;
+//       background: $neutral-20;
+//     }
+//   }
+
+// }

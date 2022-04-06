@@ -1,0 +1,6 @@
+<div class="jds-card" [ngClass]="[outline]" [style.background-color]="background=='' ? 'transparent': background"
+    [style.border-color]="borderColor=='' ? 'transparent': borderColor">
+    <ng-content select="card-header"></ng-content>
+    <ng-content select="card-body"></ng-content>
+    <ng-content></ng-content>
+</div>

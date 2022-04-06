@@ -1,0 +1,8 @@
+<div class="jds-toggle" [ngClass]="[size]">
+    <span *ngIf="position=='left'" class="toggle-label" style="margin-right: 10px;">{{title}} </span>
+    <label class="toggle-switch">
+        <input type="checkbox" [(ngModel)]="checked" [disabled]="disabled">
+        <span class="slider "> </span>
+    </label>
+    <span *ngIf="position=='right'" class="toggle-label" style="margin-right: 10px;"> {{title}} </span>
+</div>

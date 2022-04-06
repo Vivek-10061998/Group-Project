@@ -1,0 +1,204 @@
+
+@import '../shared/scss/mixins';
+@import '../shared/scss/spacing';
+@import '../shared/scss/typo';
+@import '../shared/scss/variables2';
+// .jds-table-border     to add all borders
+// .jds-table-zebra      t0 add alt bg color
+// .jds-fixed-header     to fix header   
+
+
+
+.jds-table-container{
+    overflow: auto;
+    width: 100%;
+  }
+  
+  .jds-table{
+    border-collapse: collapse;
+    // color: $neutral-100;
+    font-size: 0.875rem;
+    width: 100%;
+  
+    thead tr {
+      height: $size-component-xl;
+      
+      th{
+        padding: $space-pattern-md $space-pattern-lg;
+        border-bottom: 1px solid $neutral-40;
+        border-top: 1px solid $neutral-40;
+        font-weight: 500;
+  
+        &:nth-last-child(1){
+          border-right:1px solid $neutral-40; 
+        }
+        &:nth-child(1){
+          border-left:1px solid $neutral-40; 
+        }
+        .sort-btn{
+          border: none;
+          height: 24px;
+          width: 24px;
+          text-align: center;
+          background: transparent;
+          color: inherit;
+          vertical-align: bottom;
+          margin-left: 2px;
+          outline: none;
+      }
+      }
+    }
+  
+    tbody tr {
+      height: $size-component-lg;    
+      
+      td{
+        padding: $space-pattern-md $space-pattern-lg;
+        border-bottom: 1px solid $neutral-40;
+        font-weight: 300;
+  
+        &:nth-last-child(1){
+          border-right:1px solid $neutral-40; 
+        }
+        &:nth-child(1){
+          border-left:1px solid $neutral-40; 
+        }
+  
+        .table-icon {
+          display: inline-flex;
+          font-size: $size-icon-system-sm;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    &.jds-table-border {
+      thead tr th {
+        border-left: 1px solid $neutral-40;
+      }
+      tbody tr td {
+        border-left: 1px solid $neutral-40;
+      }
+    }
+  
+    &.jds-table-zebra {
+      tbody tr:nth-child(2n) { 
+        background: $neutral-10; 
+      }
+  
+    }
+  
+    &.jds-fixed-header {
+      border-collapse: inherit;
+      border-spacing: 0;
+  
+      thead tr th {
+        z-index: 4;
+        background-color: $neutral-0;
+        position: sticky;
+        top: 0;
+      }
+    }
+  
+  }
+  
+  // -----------------   Pagination Code
+  .jds-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+  
+    button {
+      border: 1px solid $neutral-50;
+      text-align: center;
+      outline: none;
+      height: 2.25rem;
+      display: flex;
+      font-size: 0.85rem;
+      color: $primary-100;
+      background: $neutral-0;
+      min-width: 2rem;
+      padding: 0 0.5rem;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      font-family: Roboto , Helvetica ,sans-serif;
+      font-weight: bold;
+  
+       em{
+        font-size: 1.125rem;
+      }
+      &:hover {
+        background: $neutral-20;
+        color: $neutral-100;
+      }
+  
+      &.selected{
+        color: $neutral-0;
+        background: $primary-100;
+        border-color: $primary-100;  
+      }
+      &.first-pagination{
+        border-radius: 8px 0 0 8px;
+        padding: 0 1rem;
+      }
+      &.last-pagination{    
+        border-radius: 0 8px 8px 0;
+        padding: 0 1rem;
+      }
+      &:disabled {
+        color: $neutral-40;
+        background: initial;
+      }
+    }
+    input {
+      height: 2.25rem;
+      max-width: 50px;
+      text-align: center;
+      margin-left: 0.5rem;
+    }
+    span{
+      padding-right: 0.5rem;
+    }
+  
+    select{
+      color: $neutral-70;
+      border-color: $neutral-40;
+      border-radius: $radius-xs;
+      min-width: 3.5rem;
+      height: $size-icon-product-xs;
+      outline: none;
+      
+      &:hover{
+        border-color: $neutral-50;
+      }
+    }
+  }  
+  
+  
+  // table icons
+  
+  .tbl-ico-btn{
+    font-size: 1rem;
+    border:none;  
+    outline: none;
+    cursor: pointer; 
+    color: $secondary-100;
+    background: transparent;
+    margin-right: 0.5rem;
+  
+    &.negative-font {
+      color: $negative-100;
+    }
+    &.positive-font {
+      color: $positive-100;
+    }
+    &.warning-font {
+      color: $warning-100;
+  }
+    &.info-font {
+        color: $info-100;
+    }
+    
+  } 

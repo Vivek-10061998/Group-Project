@@ -1,0 +1,524 @@
+
+
+
+// System icons size - variables
+$size-icon-system-xs: 1rem;
+$size-icon-system-sm: 1.25rem;
+$size-icon-system-md: 1.5rem;
+$size-icon-system-lg: 1.75rem;
+
+// Product icons size - variables
+$size-icon-product-xs: 2rem;
+$size-icon-product-sm: 3rem;
+$size-icon-product-md: 3.75rem;
+$size-icon-product-lg: 4.5rem;
+$size-icon-product-xl: 6rem;   
+
+//Corner Curve
+$radius-xs: 4px;
+$radius-s: 8px;
+$radius-m: 12px;
+$radius-l: 16px;
+$radius-xl: 20px;
+$radius-xxl: 24px;
+$radius-50: 50%;
+
+
+$jio-font-path: '../fonts/';
+$roboto-font-path: '../fonts/';
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url('#{$roboto-font-path}Roboto-Thin.eot');
+    src: url("#{$roboto-font-path}Roboto-Thin.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Thin.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Thin.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Thin.ttf") format("truetype");
+
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url('#{$roboto-font-path}Roboto-Light.eot');
+    src: url("#{$roboto-font-path}Roboto-Light.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Light.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Light.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url('#{$roboto-font-path}Roboto-Regular.eot');
+    src: url("#{$roboto-font-path}Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Regular.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Regular.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('#{$roboto-font-path}Roboto-Medium.eot');
+    src: url("#{$roboto-font-path}Roboto-Medium.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Medium.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Medium.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('#{$roboto-font-path}Roboto-Bold.eot');
+    src: url("#{$roboto-font-path}Roboto-Bold.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Bold.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Bold.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("#{$jio-font-path}Roboto-Light.woff2") format("woff2"),url("#{$jio-font-path}Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: JioType;
+  src: url("#{$jio-font-path}JioType-Light.woff2") format("woff2"),url("#{$jio-font-path}JioType-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: JioType;
+  src: url("#{$jio-font-path}JioType-Medium.woff2") format("woff2"),url("#{$jio-font-path}JioType-Medium.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: JioType;
+  src: url("#{$jio-font-path}JioType-Black.woff2") format("woff2"),url("#{$jio-font-path}JioType-Black.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: JioType;
+  src: url("#{$jio-font-path}JioType-Bold.woff2") format("woff2"),url("#{$jio-font-path}JioType-Bold.ttf") format("truetype");
+  font-weight: 500;
+}
+
+.font-light{
+    font-family: Roboto , Helvetica ,sans-serif;
+    font-weight: 300;
+}
+.font-medium {
+    font-family: Roboto, Helvetica ,sans-serif;
+    font-weight: 400;
+}
+.font-bold {
+    font-family: Roboto, Helvetica ,sans-serif;
+    font-weight: 500;
+}
+.font-black {
+    font-family: Roboto, Helvetica ,sans-serif;
+    font-weight: bold;
+}
+
+// @font-face {
+//   font-family: JioType-LightItalic;
+//   src: url(#{$jio-font-path}JioType-LightItalic.eot?#iefix);
+//   src: url(../fonts/JioType-LightItalic.eot?#iefix) format("eot"),url(../fonts/JioType-LightItalic.woff2) format("woff2"),url(../fonts/JioType-LightItalic.woff) format("woff"),url(../fonts/JioType-LightItalic.ttf) format("truetype")
+// }
+
+// @font-face {
+//   font-family: JioType-MediumItalic;
+//   src: url(../fonts/JioType-MediumItalic.eot?#iefix);
+//   src: url(../fonts/JioType-MediumItalic.eot?#iefix) format("eot"),url(../fonts/JioType-MediumItalic.woff2) format("woff2"),url(../fonts/JioType-MediumItalic.woff) format("woff"),url(../fonts/JioType-MediumItalic.ttf) format("truetype")
+// }
+
+
+
+@media only screen and (min-width: 1800px) {
+  .display-01 {
+      font-size:9.75rem;
+      line-height: 11.688rem
+  }
+
+  .display-02 {
+      font-size: 4.25rem;
+      line-height: 5.125rem
+  }
+
+  .h1-01 {
+      font-size: 3.75rem;
+      line-height: 4.5rem
+  }
+
+  .h2-02 {
+      font-size: 3.125rem;
+      line-height: 3.75rem
+  }
+
+  .h3-03 {
+      font-size: 2.625rem;
+      line-height: 3.188rem
+  }
+
+  .h4-04 {
+      font-size: 2rem;
+      line-height: 2.813rem
+  }
+
+  .h5-05 {
+      font-size: 1.375rem;
+      line-height: 1.875rem
+  }
+
+  .h6-06 {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+  }
+
+  .body-01 {
+      font-size: 1.125rem;
+      line-height: 1.438rem
+  }
+
+  .body-02 {
+      font-size: 1rem;
+      line-height: 1.313rem
+  }
+
+  .button-lg {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .button-md {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .button-sm {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+
+  .caption-01 {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .overline-01 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+}
+
+@media only screen and (max-width: 1799px) {
+  .display-01 {
+      font-size:7.625rem;
+      line-height: 9.188rem
+  }
+
+  .display-02 {
+      font-size: 3.75rem;
+      line-height: 4.5rem
+  }
+
+  .h1-01 {
+      font-size: 3.375rem;
+      line-height: 4.063rem
+  }
+
+  .h2-02 {
+      font-size: 2.75rem;
+      line-height: 3.313rem
+  }
+
+  .h3-03 {
+      font-size: 2.25rem;
+      line-height: 2.75rem
+  }
+
+  .h4-04 {
+      font-size: 1.75rem;
+      line-height: 2.438rem
+  }
+
+  .h5-05 {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+  }
+
+  .h6-06 {
+      font-size: 1.125rem;
+      line-height: 1.438rem
+  }
+
+  .body-01 {
+      font-size: 1.125rem;
+      line-height: 1.438rem
+  }
+
+  .body-02 {
+      font-size: 1rem;
+      line-height: 1.313rem
+  }
+
+  .button-lg {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .button-md {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .button-sm {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+
+  .caption-01 {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .overline-01 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .display-01 {
+      font-size:5.75rem;
+      line-height: 6.938rem
+  }
+
+  .display-02 {
+      font-size: 3.375rem;
+      line-height: 4.063rem
+  }
+
+  .h1-01 {
+      font-size: 3rem;
+      line-height: 3.625rem
+  }
+
+  .h2-02 {
+      font-size: 2.375rem;
+      line-height: 2.875rem
+  }
+
+  .h3-03 {
+      font-size: 1.875rem;
+      line-height: 2.25rem
+  }
+
+  .h4-04 {
+      font-size: 1.5rem;
+      line-height: 2.125rem
+  }
+
+  .h5-05 {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+  }
+
+  .h6-06 {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .body-01 {
+      font-size: 1.125rem;
+      line-height: 1.438rem
+  }
+
+  .body-02 {
+      font-size: 1rem;
+      line-height: 1.313rem
+  }
+
+  .button-lg {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .button-md {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .button-sm {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+
+  .caption-01 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .overline-01 {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+}
+
+@media only screen and (max-width: 1259px) {
+  .display-01 {
+      font-size:4.25rem;
+      line-height: 5.125rem
+  }
+
+  .display-02 {
+      font-size: 3rem;
+      line-height: 3.625rem
+  }
+
+  .h1-01 {
+      font-size: 2.625rem;
+      line-height: 3.188rem
+  }
+
+  .h2-02 {
+      font-size: 2rem;
+      line-height: 2.438rem
+  }
+
+  .h3-03 {
+      font-size: 1.625rem;
+      line-height: 2rem
+  }
+
+  .h4-04 {
+      font-size: 1.375rem;
+      line-height: 1.875rem
+  }
+
+  .h5-05 {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .h6-06 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .body-01 {
+      font-size: 1rem;
+      line-height: 1.313rem
+  }
+
+  .body-02 {
+      font-size: .875rem;
+      line-height: 1.125rem
+  }
+
+  .button-lg {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .button-md {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .button-sm {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+
+  .caption-01 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .overline-01 {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .display-01 {
+      font-size:3.125rem;
+      line-height: 3.75rem
+  }
+
+  .display-02 {
+      font-size: 2.625rem;
+      line-height: 3.188rem
+  }
+
+  .h1-01 {
+      font-size: 2.25rem;
+      line-height: 2.75rem
+  }
+
+  .h2-02 {
+      font-size: 1.75rem;
+      line-height: 2.125rem
+  }
+
+  .h3-03 {
+      font-size: 1.5rem;
+      line-height: 1.813rem
+  }
+
+  .h4-04 {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+  }
+
+  .h5-05 {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .h6-06 {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .body-01 {
+      font-size: 1rem;
+      line-height: 1.313rem
+  }
+
+  .body-02 {
+      font-size: .875rem;
+      line-height: 1.125rem
+  }
+
+  .button-lg {
+      font-size: 1rem;
+      line-height: 1.375rem
+  }
+
+  .button-md {
+      font-size: .875rem;
+      line-height: 1.25rem
+  }
+
+  .button-sm {
+      font-size: .75rem;
+      line-height: 1rem
+  }
+
+  .caption-01 {
+      font-size: .75rem;
+      line-height: 1rem 
+  }
+
+  .overline-01 {
+      font-size: .625rem;
+      line-height: .875rem
+  }
+}

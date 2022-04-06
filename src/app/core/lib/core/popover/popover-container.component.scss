@@ -1,0 +1,24 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+@import '../shared/scss/variables';
+@import '../shared/scss/variables2';
+@import '../shared/scss/typo';
+@import '../shared/scss/mixins';
+
+:host {
+  position: relative;
+  background: $neutral-0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.jds-popover-block{
+  background: $neutral-0;
+  min-width: 10rem;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  min-height: 5rem;
+  max-width: 25rem;
+  max-height: 40rem;
+  overflow: auto;
+  border-radius: $radius-xs;
+}

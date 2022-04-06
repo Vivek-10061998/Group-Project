@@ -1,0 +1,60 @@
+@import './../shared/scss/variables';
+
+@mixin generate-spinner-by-size($size, $borderWidth) {
+  border-width: $borderWidth;
+  width: $size;
+  height: $size;
+}
+
+@mixin generate-overlay-style($color, $spinner, $track) {
+  background: rgba(0, 0, 0, 0.35);
+  .spinner {
+    .spinner-inner{
+      border-color: #8cadf0;
+      border-top-color: #1715b1;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.overlay-loader {
+  position: relative;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+
+    .spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      
+      .spinner-inner {
+        border-radius: 50%;
+        border-style: solid;
+        
+        animation: spin 0.75s linear infinite;
+      
+
+        &.spinner-size {
+          @include generate-spinner-by-size(96px, 12px);
+        }
+
+      }
+    }
+   
+    &.overlay-loader-style {
+      @include generate-overlay-style(
+        #007bff40, darken($primary, 10%), lighten($primary, 20%));
+    }
+  }
+}

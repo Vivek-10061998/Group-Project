@@ -1,0 +1,116 @@
+//Informational colors - variables
+$info-10: #daf0ff;
+$info-100: #0072e3;
+$info-110: #0061c3;
+$info-100-5: rgba(0,114,227,0.05);
+$info-100-10: rgba(0,14,227,0.10);
+
+//Positive colors - variables
+$positive-10: #dcfce3;
+$positive-100: #1a873c;
+$positive-110: #0b7133;
+$positive-100-5: rgba(26,135,60,0.05);
+$positive-100-10: rgba(26,135,60,0.10);
+
+//Negative colors - variables
+$negative-10: #ffdbdc;
+$negative-100: #c71720;
+$negative-110: #96181c;
+$negative-100-5: rgba(199,23,32,0.05);
+$negative-100-10: rgba(199,23,32,0.10);
+
+//Warning colors - variables
+$warning-10: #fff3ea;
+$warning-100: #de6421;
+$warning-110: #c04503;
+$warning-100-5: rgba(222,100,33,0.05);
+$warning-100-10: rgba(222,100,33,0.10);
+
+//Neutrals colors - variables
+$neutral-0: #ffffff;
+$neutral-0-50: rgba(255,255,255,0.5);
+$neutral-0-70: rgba(255,255,255,0.7);
+$neutral-0-80: rgba(255,255,255,0.8);
+$neutral-0-30: rgba(255,255,255,0.3);   
+$neutral-0-20: rgba(255,255,255,0.2);
+$neutral-0-10: rgba(255,255,255,0.1);
+$neutral-0-5: rgba(255,255,255,0.05);
+$neutral-10: #f5f6fb;
+$neutral-100: #000000;
+$neutral-20: #e7eaf4;
+$neutral-40: #c4c9d9;
+$neutral-50: #afb4c5;
+$neutral-70: #767b87;
+$neutral-70-10: rgba(118,123,135,0.10);
+$neutral-70-5: rgba(118,123,135,0.05);
+$neutral-80: #52555e;
+
+//Primary colors - variables
+$primary-0: #f6fbff;
+$primary-5: #d8e9fd;
+$primary-100: #2352A9;
+$primary-110: #1c326a;
+$primary-80: #406fd3;
+$primary-80-80: rgba(64,111,211,0.8);
+$primary-80-5: rgba(64,111,211,0.05);
+$primary-80-10: rgba(64,111,211,0.10);
+$primary-90: #315cbb;
+
+//Secondary colors - variables
+$secondary-100: #2E6BDC;
+$secondary-110: #275EC4;
+$secondary-90: #4279DF;
+
+// $secondary-100: #A4670F;
+// $secondary-110: #D08000;
+// $secondary-90: #FFF9DE;
+
+$secondarygreen-110: #257504;
+$secondarygreen-100: #50a611;
+$secondarygreen-5: #EAFCD8;
+	
+$secondarypurple-110: #6840E6;
+$secondarypurple-100: #9B77FF;
+$secondarypurple-5: #EAE4FF;
+	
+$secondaryyellow-110: #A4670F;
+$secondaryyellow-100: #D08000;
+$secondaryyellow-5: #FFF9DE;
+	
+$secondarysavoyblue-110: #5A60CB;
+$secondarysavoyblue-100: #D08000;
+$secondarysavoyblue-5: #F3FEFF;
+	
+$secondaryblue-110: #4671DB;
+$secondaryblue-100: #528EFF;
+$secondaryblue-5: #E9F6FF;
+	
+$secondaryred-110: #C14F48;
+$secondaryred-100: #E8594D;
+$secondaryred-5: #FFE9E9;
+
+
+.primary-font {
+    color: $primary-100;
+}
+.secondary-font {
+    color: $secondary-100;
+}
+.warning-font {
+    color: $warning-100;
+}
+.info-font {
+    color: $info-100;
+}
+.positive-font{
+    color: $positive-100;
+}
+.negative-font{
+    color: $negative-100;
+}
+.black-font {
+    color: $neutral-100;
+}
+.white-font {
+    color: $neutral-0;
+}

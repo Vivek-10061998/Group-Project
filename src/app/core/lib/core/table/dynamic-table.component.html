@@ -1,0 +1,79 @@
+<div class="row border-bottom mb-3">
+  <div class="col-md-4">
+    <div class="jds-input-block mb-3">
+      <input type="text" class="jds-input-form gray-bg "placeholder="Search" [(ngModel)]="searchText" >      
+    </div>
+  </div>
+  
+  <div class="col-md-8 col-6 pb-3">
+    <div class="d-flex align-items-center justify-content-end">
+      <div class=" gray-text caption-01 font-light pe-3"> Order Date</div>
+      <div class="jds-input-block mb-0">
+        <input type="date" class="jds-input-form gray-bg "placeholder="Date"  >  
+      </div>
+    </div>
+     
+  </div>
+</div>
+<div class="jds-table-container">        
+    <table class="jds-table jds-table-border " summary="Dynamic table"> 
+        <thead>
+            <tr>
+              <th id="{{col}}" *ngFor="let col of tableDataSource.column">{{ col }}
+                      <button class="sort-btn"  type="button" (click)="sortList(col,'asc');isAscendingList[col] = false" *ngIf="isAscendingList[col]">
+                        <em class="bi bi-arrow-up"></em>
+                      </button>
+                      <button class="sort-btn"   type="button" (click)="sortList(col,'desc');isAscendingList[col] = true" *ngIf="!isAscendingList[col]">
+                        <em class="bi bi-arrow-down"></em>
+                      </button>
+              </th>
+              <th id="action" *ngIf="true"> Action </th> 
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of tableDataSource.rowValue  | customFilter: '' : searchText; let i = index">
+                <td *ngFor="let val of  tableDataSource.column;let in = index">
+                  {{row[val]}}
+                </td>
+                <td  *ngIf="true"> 
+                  <button type="button" class="tbl-ico-btn secondary-font" (click)="editTableRow(i)" ><em class="bi bi-pen"></em> </button>
+                  <button type="button" class="tbl-ico-btn negative-font" (click)="removeRow(i)"  > <em class="bi bi-trash"></em> </button>
+                  <button type="button" class="tbl-ico-btn positive-font"  (click)="viewItem(i)" > <em class="bi bi-eye"></em> </button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+  <div class="jds-pagination">
+    <div class="caption-01 pe-4">
+     <span>  Items per page </span> 
+     <select [(ngModel)]="currentNumberOfRecords" (change)="onPageOptionSelection(currentNumberOfRecords)">
+        <option *ngFor="let options of pageOptions">
+          {{options}}
+        </option>
+      </select> 
+    </div>
+
+    <div class="gray-font bold caption-01 pe-4">1  - {{currentNumberOfRecords > tableData?.length ? tableData?.length : currentNumberOfRecords}} of {{tableData?.length}}
+   </div>
+
+    <button class="first-pagination " (click)="pagination.first()" [disabled]="pagination.isFirst"> First </button>
+    <button (click)="pagination.prev()" [disabled]="pagination.isFirst"> <em class="bi bi-chevron-left"></em> </button>
+    
+    <input
+      appPagination
+      #pagination="appPagination"   
+      [totalPages]="totalPages"
+      (pageChange)="onPageChange($event)"
+    />
+    <span class="ms-2"> / {{ pagination.totalPages }}</span>
+   <!-- <div class="d-flex" *ngFor="let item of [].constructor(5); let i = index">
+          <button  type="button">{{i+1}}</button>
+    </div> -->
+    <button (click)="pagination.next()" [disabled]="pagination.isLast"> <em class="bi bi-chevron-right"></em> </button>
+    <button class="last-pagination" (click)="pagination.last()" [disabled]="pagination.isLast"> Last  </button>
+  </div> 
+

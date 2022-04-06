@@ -1,0 +1,521 @@
+
+//Defult
+.icon {
+	width: $size-icon-system-md;
+	height: $size-icon-system-md;
+	display: grid;
+	overflow: hidden;
+}
+
+
+// System icons
+.icon-s-xs {
+	width: $size-icon-system-xs;
+	height: $size-icon-system-xs;
+}
+.icon-s-sm {
+	width: $size-icon-system-sm;
+	height: $size-icon-system-sm;
+}
+.icon-s-md {
+	width: $size-icon-system-md;
+	height: $size-icon-system-md;
+}
+
+.icon-s-lg {
+	width: $size-icon-system-lg;
+	height: $size-icon-system-lg;
+}
+
+
+
+
+// Product icons
+.icon-p-xs {
+	width: $size-icon-product-xs;
+	height: $size-icon-product-xs;
+}
+.icon-p-sm {
+	width: $size-icon-product-sm;
+	height: $size-icon-product-sm;
+}
+.icon-p-md {
+	width: $size-icon-product-md;
+	height: $size-icon-product-md;
+}
+.icon-p-lg {
+	width: $size-icon-product-lg;
+	height: $size-icon-product-lg;
+}
+.icon-p-xl {
+	width: $size-icon-product-xl;
+	height: $size-icon-product-xl;
+}
+
+
+
+$box-shadow: 0 0 1px 2px $primary-80-80; 
+$box-shadow-inverse: 0 0 1px 2px $neutral-0-50; 
+
+//Base
+.r-btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-100;
+  border: 0px;
+  text-align: center;
+  color: $neutral-0;
+  height: $size-component-md;
+  padding: 0 $space-pattern-lg;
+  font-family: "Roboto", Helvetica ,sans-serif ;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  outline: none;
+
+  .icon {
+    fill: $neutral-0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $neutral-0;
+    background-color: $primary-90;
+  }
+  
+  &:hover {
+  background-color: $primary-80;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $neutral-40;
+    background-color: $neutral-20;
+    pointer-events: none;
+
+    .icon {
+      fill: $neutral-40;
+    }
+  }
+ 
+// color related code
+
+  &.r-btn-primary{
+    background: $primary-100;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $neutral-0;
+      background-color: $primary-90;
+    }
+    
+    &:hover {
+    background-color: $primary-80;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      color: $neutral-40;
+      background-color: $neutral-20;
+      pointer-events: none;
+    }
+  }
+
+  &.r-btn-secondary{
+    background:  $secondary-100;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $neutral-0;
+      background-color: $primary-90;
+    }
+    
+    &:hover {
+    background-color: $primary-80;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &:disabled {
+      color: $neutral-40;
+      background-color: $neutral-20;
+      pointer-events: none;
+    }
+  }
+
+&.r-btn-success {
+   background-color: $positive-110;
+   
+   
+     &:hover,
+    &:focus,
+    &:active {
+      background-color: $positive-100;
+    }
+  
+    &:disabled {
+      background-color: $neutral-20;
+    }
+   
+   
+  }
+  
+  &.r-btn-warning { 
+  background-color: $warning-110;
+  
+     &:hover,
+    &:focus,
+    &:active {
+      background-color: $warning-100;
+    }
+  
+    &:disabled {
+      background-color: $neutral-20;
+    }
+  }
+  
+  &.r-btn-danger {
+  background-color: $negative-110;
+  
+     &:hover,
+    &:focus,
+    &:active {
+      background-color: $negative-100;
+    }
+  
+    &:disabled {
+      background-color: $neutral-20;
+    }
+  }
+  
+  &.r-btn-info {
+   background-color: $info-110;
+   
+      &:hover,
+    &:focus,
+    &:active {
+      background-color: $info-100;
+    }
+  
+    &:disabled {
+      background-color: $neutral-20;
+    }
+  }
+
+
+}
+
+
+.r-btn-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: $size-component-md;
+  padding: 0 $space-pattern-lg;
+  font-family: "Roboto", Helvetica ,sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  background-color: transparent;
+  border: 1px solid $primary-100;
+  color: $primary-100;
+  outline: none;
+
+  .icon {
+    fill: $primary-100;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary-90;
+    border-color: $primary-90;
+    background-color: transparent;
+    .icon {
+      fill: $primary-90;
+    }
+  } 
+  
+    
+   &:hover{
+    background-color: $primary-80-5;
+  }
+  
+     &:active{
+    background-color: $primary-80-10;
+  }
+  
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $neutral-20;
+    color: $neutral-40;
+    .icon {
+      fill: $neutral-40;
+    }
+  }
+     
+  &.r-btn-success {
+    background-color: transparent;
+    border: 1px solid $positive-110;
+    color: $positive-110;
+    .icon {
+      fill: $positive-110;
+    }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: $positive-100;
+      border-color: $positive-100;
+      background-color: transparent;
+      .icon {
+        fill: $positive-100;
+      }
+    }
+    
+      &:hover{
+      background-color: $positive-100-5;
+    }
+    
+      &:active{
+      background-color: $positive-100-10;
+    }
+    
+
+    &:disabled {
+      background-color: transparent;
+      border-color: $neutral-20;
+      color: $neutral-40;
+      .icon {
+        fill: $neutral-40;
+      }
+    }
+  
+  
+  }
+
+  &.r-btn-warning { 
+    background-color: transparent;
+    border: 1px solid $warning-110;
+    color: $warning-110;
+
+    .icon {
+      fill: $warning-110;
+    }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: $warning-100;
+      border-color: $warning-100;
+      background-color: transparent;
+
+      .icon {
+        fill: $warning-100;
+      }
+    }
+    
+        &:hover{
+      background-color: $warning-100-5; 
+    }
+    
+      &:active{
+      background-color: $warning-100-10;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: $neutral-20;
+      color: $neutral-40;
+      
+          .icon {
+        fill: $neutral-40;
+      }
+    }
+  }
+
+  &.r-btn-danger {
+    background-color: transparent;
+    border: 1px solid $negative-110;
+    color: $negative-110;
+
+    .icon {
+      fill: $negative-110;
+    }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: $negative-100;
+      border-color: $negative-100;
+      background-color: transparent;
+    }
+    
+      &:hover{
+      background-color: $negative-100-5;
+    }
+    
+      &:active{
+      background-color: $negative-100-10;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: $neutral-20;
+      color: $neutral-40;
+
+      .icon {
+        fill: $neutral-40;
+      }
+    }
+  }
+
+  &.r-btn-info {
+    background-color: transparent;
+    border: 1px solid $info-110;
+    color: $info-110;
+
+    .icon {
+      fill: $info-110;
+    }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: $info-100;
+      border-color: $info-100;
+      background-color: transparent;
+    }
+    
+    &:hover{
+      background-color: $info-100-5;
+    }
+    
+      &:active{
+      background-color: $info-100-10;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: $neutral-20;
+      color: $neutral-40;
+      .icon {
+        fill: $neutral-40;
+      }
+    }
+  } 
+
+  &.r-btn-secondary {
+    background-color: transparent;
+  border: 1px solid $secondary-110;
+  color: $secondary-110;
+
+  .icon {
+    fill: $secondary-110;
+  }
+
+    &:hover,
+  &:focus,
+  &:active {
+    color: $secondary-100;
+    border-color: $secondary-100;
+    background-color: transparent;
+  }
+  
+      &:hover{
+    background-color: $info-100-5;
+  }
+  
+      &:active{
+    background-color: $info-100-10;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $neutral-20;
+    color: $neutral-40;
+
+    .icon {
+      fill: $neutral-40;
+    }
+  }
+  } 
+
+}
+
+
+// size for all
+.r-btn-large{
+  height: $size-component-lg;
+}
+
+.r-btn-medium{
+  height: $size-component-md;
+
+}
+
+.r-btn-small{
+  height: $size-component-sm;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  &.r-btn-rounded{
+    border-radius: $radius-xs;
+  }
+
+  &.r-btn-pilled {
+    border-radius: 1rem;
+  }
+}
+// size for all close
+
+// radius for btn
+
+.r-btn-squared{
+  border-radius: none;
+}
+
+.r-btn-rounded{
+  border-radius: $radius-s;
+}
+
+.r-btn-pilled {
+  border-radius: 2rem;
+}
+
+// radius ends
+.r-btn-solid {
+ 
+  & + .r-btn-solid {
+   margin-left: $space-pattern-sm;
+   margin-bottom: $space-pattern-sm;
+  }
+}
+
+.r-btn-outlined {
+
+  & + .r-btn-outlined {
+    margin-left: $space-pattern-sm;
+    margin-bottom: $space-pattern-sm;
+  }
+}
+

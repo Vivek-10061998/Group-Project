@@ -1,0 +1,11 @@
+<div [ngClass]="{'input-rhs-control': type=='password' || type=='iconbutton' }" class="jds-input-block">
+    <label>{{ label }} <span *ngIf="required"> *</span></label>
+
+    <ng-content select="[textfield]"></ng-content>
+
+    <span *ngIf="type=='password'" class="rhs-icon primary-font pointer" (click)="togglePassword()">
+        <em [ngClass]="showPasswd ? 'bi bi-eye' : 'bi bi-eye-slash'"></em>
+    </span>
+    <ng-content select="icon"></ng-content>
+    <ng-content select="hint"></ng-content>
+</div>

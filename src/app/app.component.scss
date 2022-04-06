@@ -1,0 +1,47 @@
+
+.jds-main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.jds-content-with-menu {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.jds-page-load {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+    margin-left: 250px;
+    transition: margin-left 0.5s ease-in;
+}
+
+
+
+// Xtra Small devices (feature phones, 240px and up)
+@media (min-width: 240px) { 
+    .header-fixed .jds-content-with-menu {
+        padding-top: 56px;
+    }
+    .menu-close .jds-page-load {
+        margin-left: 56px;
+    }
+        
+
+  
+   }
+  
+  
+  // Xtra Large devices (desktops, 1260 and up)
+  @media (min-width: 1260px) { 
+    .header-fixed .jds-content-with-menu {
+        padding-top: 64px;
+    }
+    .menu-close .jds-page-load {
+        margin-left: 64px;
+    }
+
+
+  
+   }
