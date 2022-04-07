@@ -8,6 +8,7 @@ import { HttpService } from './http.service';
   providedIn: 'root'
 })
 export class AuthService {
+  login: any;
 
   constructor(@Inject(DOCUMENT) private document: any,
   private httpService: HttpService) { }
@@ -33,7 +34,7 @@ export class AuthService {
       this.document.location.href = `${environment.loginUrl}?redirectURL=${environment.appUrl}`;
     }
     
-    // this.document.location.href = `${environment.loginUrl}`;
+     //this.document.location.href = `${environment.loginUrl}`;
   }
 
 

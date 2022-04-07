@@ -17,11 +17,13 @@ export function loadUrls(appInitService: AppInitService) {
   return () => appInitService.loadUrls();
 }
 import * as $ from "jquery";
+import { LoginComponent } from './auth/login/login.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
