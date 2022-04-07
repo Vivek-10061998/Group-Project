@@ -39,6 +39,13 @@ export class AuthService {
   getUserDetails() {
     return this.httpService.post('rpnc/userservice/api/v1/user/me');
   }
+  createUser(email:string,password:string){
+    const authData:AuthData={email:email, password:password};
+    this.http.post(this.authUrl+'signup',authData).subscribe(response=>{
+        console.log(response);
+        this.router.navigate(['/']);
+    })
+}
   login(email:string,password:string){
     const authData:AuthData={email:email,password:password};
     this.http.post<{token:string,expiresIn:number}>(this.authUrl+"login",authData).subscribe(response=>{
