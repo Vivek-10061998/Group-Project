@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { Router } from '@angular/router';
+import { AuthService } from "../../services/auth.service";
 // import { AuthService, ThemingService, SidenavService, NotificationService, AppConfigService } from "src/app/core/services";
 @Component({
   selector: "app-header",
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-
+  userIsAuthenticated=false;
   userName: string = '';
   userEmail: string = '';
   notificationList :any;
@@ -45,7 +46,8 @@ export class HeaderComponent implements OnInit {
     }
   ];
   constructor(
-    // public authService: AuthService, private snackbar: SnackbarService,
+    public authService: AuthService,
+    // private snackbar: SnackbarService,
     // private themingService: ThemingService,private notificationService : NotificationService,
     // public sidenavService: SidenavService,private appConfigService : AppConfigService,
     private router: Router
@@ -58,6 +60,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit() {
+    this.userIsAuthenticated=this.authService.getIsAuthenticated();
     try {
       setTimeout(() => {
         this.getUserName();
@@ -115,10 +118,10 @@ export class HeaderComponent implements OnInit {
   // @HostListener('window:unload', ['$event'])
   logout() {
     try {
-      // this.authService.logout();
+      this.authService.logout();
     }
     catch (e) {
-      // this.snackbar.openSnackBar(e.message, 'close', 'red-snackbar');
+      //this.snackbar.openSnackBar(e.message, 'close', 'red-snackbar');
     }
   }
 

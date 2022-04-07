@@ -3,14 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './core/services/auth-guard.service';
 import { from } from 'rxjs';
 import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home', component:HomeComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: 'dashboard',
@@ -24,7 +32,7 @@ const routes: Routes = [
     path: 'session-timeout',
     loadChildren: () => import('src/app/core/components/session-timeout/session-timeout.module').then(m => m.SessionTimeoutModule)
   },
-  { path: '**', redirectTo: 'dashboard' },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

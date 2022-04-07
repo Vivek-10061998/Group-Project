@@ -18,12 +18,14 @@ export function loadUrls(appInitService: AppInitService) {
 }
 import * as $ from "jquery";
 import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
