@@ -19,7 +19,7 @@ import { ModalModule,SidepanelModule } from 'rui';
     FormsModule,
     ReactiveFormsModule,
     ModalModule,
-    SidepanelModule 
+    SidepanelModule,
   ],
   exports: [
     HeaderComponent,
