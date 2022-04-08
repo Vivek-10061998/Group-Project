@@ -9,6 +9,7 @@ import { AuthService } from "../../services/auth.service";
 })
 export class HeaderComponent implements OnInit {
   userIsAuthenticated=false;
+  private authListenerSub$:any;
   userName: string = '';
   userEmail: string = '';
   notificationList :any;
@@ -61,6 +62,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userIsAuthenticated=this.authService.getIsAuthenticated();
+    this.authListenerSub$=this.authService.getAuthStatusListener().subscribe(
+      isAuthenticated=>{
+        this.userIsAuthenticated=isAuthenticated;
+      }
+    )
     try {
       setTimeout(() => {
         this.getUserName();
