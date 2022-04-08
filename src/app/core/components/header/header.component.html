@@ -63,7 +63,7 @@
     <span class="initials-here"> AN </span>
 
     <div class="notify-dropdown fix-width"> 
-      <div class="">
+      <div class="" *ngIf="userIsAuthenticated">
         <button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
           <em class="bi bi-person me-2"> </em> View Profile
         </button>
@@ -71,18 +71,18 @@
           <em class="bi bi-power me-2"> </em> Logout
         </button>
       </div> 
-      <!-- <div class=""  *ngIf="!userIsAuthenticated">
-        <a class="" href="/signup">
+      <div class=""  *ngIf="!userIsAuthenticated">
+        <!-- <a class="" href="/signup">
         <button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
           <em class="bi bi-person-plus me-2"> </em> Sign Up
         </button>
-        </a>
+        </a> -->
         <a class="" href="/login">
         <button class="r-btn-outlined r-btn-small r-btn-warning full-width justify-content-start border-none ms-0 mb-0">
           <em class="bi bi-person me-2"> </em> Sign In
         </button>
         </a>
-      </div>       -->
+      </div>      
     </div>
   </button> 
 </header>
