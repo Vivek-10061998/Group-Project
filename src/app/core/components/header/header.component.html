@@ -46,7 +46,7 @@
       </div>
     </div>
   </button>    
-  <button class="header-rhs-btn " *ngIf="userIsAuthenticated">
+  <button class="header-rhs-btn " *ngIf="userIsAuthenticated" (click)="logout()">
       <!-- <em class="bi bi-power"></em> -->
       <div class="icon-section">
       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 21.883 21.908">
@@ -63,15 +63,15 @@
     <span class="initials-here"> AN </span>
 
     <div class="notify-dropdown fix-width"> 
-      <div class=""  *ngIf="userIsAuthenticated">
+      <div class="">
         <button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
           <em class="bi bi-person me-2"> </em> View Profile
         </button>
-        <button class="r-btn-outlined r-btn-small r-btn-danger full-width justify-content-start border-none ms-0 mb-0">
+        <button class="r-btn-outlined r-btn-small r-btn-danger full-width justify-content-start border-none ms-0 mb-0" (click)="logout()">
           <em class="bi bi-power me-2"> </em> Logout
         </button>
       </div> 
-      <div class=""  *ngIf="!userIsAuthenticated">
+      <!-- <div class=""  *ngIf="!userIsAuthenticated">
         <a class="" href="/signup">
         <button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
           <em class="bi bi-person-plus me-2"> </em> Sign Up
@@ -82,7 +82,7 @@
           <em class="bi bi-person me-2"> </em> Sign In
         </button>
         </a>
-      </div>      
+      </div>       -->
     </div>
   </button> 
 </header>

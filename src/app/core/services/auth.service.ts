@@ -67,12 +67,15 @@ export class AuthService {
   logout() {
     sessionStorage.clear();
     localStorage.clear();
-
-    if(window.location.hostname === "localhost"){
-      this.document.location.href = `${environment.loginUrl}?redirectURL=${window.location.host}`;
-    } else {
-      this.document.location.href = `${environment.loginUrl}?redirectURL=${environment.appUrl}`;
-    }
+    this.token=null;
+    this.isAuthenticated=false;
+    this.authStatusListener.next(false);
+    this.router.navigate(['/'])
+    // if(window.location.hostname === "localhost"){
+    //   this.document.location.href = `${environment.loginUrl}?redirectURL=${window.location.host}`;
+    // } else {
+    //   this.document.location.href = `${environment.loginUrl}?redirectURL=${environment.appUrl}`;
+    // }
     
      //this.document.location.href = `${environment.loginUrl}`;
   }
