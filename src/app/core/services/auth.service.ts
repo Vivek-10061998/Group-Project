@@ -43,7 +43,7 @@ export class AuthService {
     const authData:AuthData={email:email, password:password};
     this.http.post(this.authUrl+'signup',authData).subscribe(response=>{
         console.log(response);
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
     })
 }
   login(email:string,password:string){
@@ -70,7 +70,7 @@ export class AuthService {
     this.token=null;
     this.isAuthenticated=false;
     this.authStatusListener.next(false);
-    this.router.navigate(['/'])
+    this.router.navigate(['/login'])
     // if(window.location.hostname === "localhost"){
     //   this.document.location.href = `${environment.loginUrl}?redirectURL=${window.location.host}`;
     // } else {

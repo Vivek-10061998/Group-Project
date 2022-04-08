@@ -19,6 +19,7 @@ export function loadUrls(appInitService: AppInitService) {
 import * as $ from "jquery";
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './auth/signup/signup.component';
 
 
 
@@ -26,7 +27,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
-   
+    SignUpComponent,
     HomeComponent
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 import { AuthService } from "../../../app/core/services/auth.service";
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent{
     errorMessage="";
     isLoading=false;
     page=false;
-    constructor(private authService:AuthService){}
+    constructor(private authService:AuthService, private router:Router){}
     login(loginForm:NgForm){
         console.log("Login successful" + loginForm.value)
         if(loginForm.invalid){
@@ -20,6 +21,7 @@ export class LoginComponent{
         }
         this.isLoading=true;
         this.authService.login(loginForm.value.userName,loginForm.value.password)
+        this.router.navigate(['/home'])
     }
     onSignUp(form:NgForm)
     {
@@ -28,6 +30,7 @@ export class LoginComponent{
         }
         this.isLoading=true;
         this.authService.createUser(form.value.email,form.value.password)
+        this.router.navigate(['/login'])
     }
     pageChange(){
         this.page=!this.page;

@@ -1,0 +1,80 @@
+<head>
+    <style>
+      body{
+          background-image: url('../../../assets/images/background.jpg');
+          height:46.6rem;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          margin: 0rem;
+      }
+      fieldset{
+        background-color: aliceblue;
+        width:max-content;
+        margin: 12rem 2rem;
+        padding: 2rem;
+      }
+      h1,h2{
+        color: white;
+        text-align: center;
+      }
+      .h2,.lead{
+        color: blue;
+        text-align: center;
+      }
+      .form-group{
+        justify-content: space-around;
+        padding: 0.5rem;
+      }
+      .main-content{
+        display: flex;
+        flex-direction: row;
+        margin: 0rem;
+      }
+      .heading{
+        margin: 15rem 2rem;
+        width: 60%
+      }
+    </style>
+  </head>
+  <body><div class='container main-content'>
+    <div class="card">
+        <div class="card-header">
+            {{pageTitle}}
+        </div>
+    </div>
+    <div class="card-body">
+        <form class="form-group" (submit)="onSignUp(signUpForm)" #signUpForm="ngForm" *ngIf="!isLoading">
+            <fieldset>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label"
+                for="usernameId">Email</label>
+                <div class="col-md-8">                    
+                    <input class="form-control"
+                    name=email 
+                    ngModel type="email" 
+                    placeholder="Email" 
+                    #emailInput="ngModel" 
+                    required/>                    
+                    <div *ngIf="emailInput.invalid"><p>Please enter a valid email</p></div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label"
+                for="passwordId">Password</label>
+                <div class="col-md-8">
+                    <input class="form-control"
+                    name=password 
+                    ngModel type="password" 
+                    placeholder="password" 
+                    #passwordInput="ngModel" 
+                    required/>
+                    <div *ngIf="passwordInput.invalid"><p>Please enter a valid password</p></div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Sign Up</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
