@@ -1,20 +1,49 @@
+<head>
+  <style>
+    body{
+        background-image: url('../../../assets/images/background.jpg');
+        height:46.6rem;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0rem;
+    }
+    fieldset{
+      background-color: aliceblue;
+      width:max-content;
+      margin: 12rem 2rem;
+      padding: 2rem;
+    }
+    h1,h2{
+      color: white;
+      text-align: center;
+    }
+    .h2,.lead{
+      color: blue;
+      text-align: center;
+    }
+    .form-group{
+      justify-content: space-around;
+      padding: 0.5rem;
+    }
+    .main-content{
+      display: flex;
+      flex-direction: row;
+      margin: 0rem;
+    }
+    .heading{
+      margin: 15rem 2rem;
+      width: 60%
+    }
+  </style>
+</head>
+<body>
 <div class='container main-content'>
-    <div>
-      <h1>Login</h1>
-    </div>
-    <div class="text-center mt-4">
-      <h1 class="h2">Welcome back</h1>
-      <p class="lead">
-        Sign in to your account to continue
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <div class="m-sm-4">
-          <div class="text-center">
-            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Andrew Jones" class="img-fluid rounded-circle" width="132" height="132">
-          </div>
+  <div class="heading">
+      <h1>Buyer First</h1> 
+      <h2>IndiaMart Buyer Portal</h2>  
+  </div>
+    
     <div class="card-body">
         <form class="needs-validation"
               novalidate
@@ -22,15 +51,19 @@
               #loginForm="ngForm"
               autocomplete="off">
           <fieldset>
+            <div class="text-center mt-4">
+              <h1 class="h2">Welcome back</h1>
+              <p class="lead">
+                Sign in to your account to continue
+              </p>
+            </div>
             <div class="form-group row">
-              <label class="col-md-2 col-form-label"
-                     for="userNameId">User Name</label>
               <div class="col-md-8">
                 <input class="form-control"
                        [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }"
                        id="userNameId"
                        type="text"
-                       placeholder="User Name (required)"
+                       placeholder="User Name"
                        required
                        ngModel
                        name="userName"
@@ -43,14 +76,12 @@
             </div>
   
             <div class="form-group row">
-              <label class="col-md-2 col-form-label"
-                     for="passwordId">Password</label>
               <div class="col-md-8">
                 <input class="form-control"
                        [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }"
                        id="passwordId"
                        type="password"
-                       placeholder="Password (required)"
+                       placeholder="Password"
                        required
                        ngModel
                        name="password"
@@ -64,27 +95,25 @@
   
             <div class="form-group">
               <div class="col-md-4 col-md-offset-2">
-                <span>
+                <span class="b1">
                   <button class="btn btn-primary"
                           type="submit"
                           style="width:80px;margin-right:10px"
                           [disabled]="!loginForm.valid">
-                    Log In
+                    Login
                   </button>
                 </span>
-                <span>
-                  <a class="btn btn-light"
-                     (click)="cancel()">
-                    Cancel
-                  </a>
-                </span>
               </div>
+            </div>
+            <div>
+              <span>Don't have a Buyer's Account? </span>
+              <span><a class="" href="/signup">SignUp</a></span>
             </div>
           </fieldset>
         </form>
         <div class="alert alert-danger"
              *ngIf="errorMessage">{{errorMessage}}</div>
       </div>
-
 </div>
+</body>
 

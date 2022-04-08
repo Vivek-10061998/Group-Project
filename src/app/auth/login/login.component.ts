@@ -20,7 +20,12 @@ export class LoginComponent{
         this.isLoading=true;
         this.authService.login(loginForm.value.userName,loginForm.value.password)
     }
-    cancel(){
-        console.log("form reset")
+    onSignUp(form:NgForm)
+    {
+        if(form.invalid){
+            return;
+        }
+        this.isLoading=true;
+        this.authService.createUser(form.value.email,form.value.password)
     }
 }
