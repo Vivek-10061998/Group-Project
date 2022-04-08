@@ -5,7 +5,7 @@ import { from } from 'rxjs';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
-import { SignUpComponent } from './signup/signup.component';
+
 
 
 const routes: Routes = [
@@ -21,9 +21,7 @@ const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
-  {
-    path: 'signup', component: SignUpComponent
-  },
+  
   {
     path: 'dashboard',
     // canLoad: [AuthGuardService],

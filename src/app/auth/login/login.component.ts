@@ -11,6 +11,7 @@ export class LoginComponent{
     maskUserName: boolean=true;
     errorMessage="";
     isLoading=false;
+    page=false;
     constructor(private authService:AuthService){}
     login(loginForm:NgForm){
         console.log("Login successful" + loginForm.value)
@@ -27,5 +28,8 @@ export class LoginComponent{
         }
         this.isLoading=true;
         this.authService.createUser(form.value.email,form.value.password)
+    }
+    pageChange(){
+        this.page=!this.page;
     }
 }
