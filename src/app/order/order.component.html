@@ -25,6 +25,8 @@
                                             </ng-container>
                                         </ng-template>
                                     </app-autocomplete>
+                                    <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-download pr-2"></em> Download</button>
+                                    <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-funnel-fill pr-2"></em> Filter</button>
                                 </div>
                                 <div class="col-md-3">
                                     
@@ -34,11 +36,11 @@
                                         <h6 style="color:#2352a9">1.61 B</h6>
                                     </card>
                                 </div> </tab>
-                            <tab tabTitle="Measurement sheet"> <chip title="Unit Rate Based MS(3)" color="info" size="large"></chip>
+                            <tab tabTitle="Measurement sheet"> 
+                                <chip title="Unit Rate Based MS" color="info" size="large"></chip>
                                 <br><br>
                                     <div>
                                         <input class="input is-medium" placeholder="Search..." [formControl]="control" [appAutocomplete]="autocomplete">
-                                    
                                         <app-autocomplete #autocomplete="appAutocomplete">
                                             <ng-template appAutocompleteContent>
                                                 <ng-container *ngIf="(options | filter: control.value) as result">
@@ -49,6 +51,8 @@
                                                 </ng-container>
                                             </ng-template>
                                         </app-autocomplete>
+                                        <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-download pr-2 pr-2"></em> Download</button>
+                                        <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-funnel-fill pr-2"></em> Filter</button>
                                     </div>
                                     <div class="col-md-3">
                                        
@@ -59,7 +63,34 @@
                                         </card>
                                     </div></tab>
                             <tab tabTitle="Shipment">  </tab>
-                            <tab tabTitle="Payments">  </tab>
+                            <tab tabTitle="Payments">
+                                <chip title="Detective Invoice" color="info" design="bordered"></chip>
+                                <chip title="In Progress" color="info" design="bordered"></chip>
+                                <chip title="Payment History" color="info" design="bordered"></chip>
+                                <br><br>
+                                    <div>
+                                        <input class="input is-medium" placeholder="Search..." [formControl]="control" [appAutocomplete]="autocomplete">
+                                        <app-autocomplete #autocomplete="appAutocomplete">
+                                            <ng-template appAutocompleteContent>
+                                                <ng-container *ngIf="(options | filter: control.value) as result">
+                                                    <app-option *ngFor="let option of result" [value]="option.label">
+                                                        {{ option.label }}
+                                                    </app-option>
+                                                    <app-option class="no-result" *ngIf="!result.length">No result...</app-option>
+                                                </ng-container>
+                                            </ng-template>
+                                        </app-autocomplete>
+                                        <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-download pr-2 pr-2"></em> Download</button>
+                                        <button class="me-3"  ruibutton design="outlined" shape="borderless" size="medium" color="secondary"><em class="bi bi-funnel-fill pr-2"></em> Filter</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                       
+                                        <card outline="bordered" background="white" borderColor="#dee2e6">
+                                            <h6>Vendor Name</h6>
+                                            <h6>Spend</h6>
+                                            <h6 style="color:#2352a9">1.61 B</h6>
+                                        </card>
+                                    </div>  </tab>
                         </tabs>
                         
                         <!-- <tabs [selectedTab]="1" (tabChange)="selectionChange($event)">
