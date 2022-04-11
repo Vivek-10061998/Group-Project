@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth/signup/signup.component';
 import { LoginModule } from './auth/login.modules';
 import { ProfileComponent } from './profile/profile.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -29,7 +30,8 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

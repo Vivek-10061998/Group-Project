@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/signup/signup.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'profile', component:ProfileComponent
+  },
+  {
+    path: 'order', component:OrderComponent
   },
   {
     path: 'session-timeout',
