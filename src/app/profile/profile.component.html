@@ -8,29 +8,43 @@
                 <div class="'container-fluid">
                         <div>
                             <h1>My Profile</h1>
-                        </div>
-                        <div>
-                            <div class="col-md-8">
+                        </div>                            
                                 <div class="row">
-                                    <div class="col-md-3">Name</div>
-                                    <input type="text"/>
-                                    <!-- <span class="input-message" [ngClass]="[error ? 'error-message':'',(position=='right')?'full-width text-right':'' ]">
-                                    <span class="input-message" >
-                                        <ng-content></ng-content>
-                                      </span> -->
-                                    <div class="col-md-3">Last Name</div>
-                                    <input type="text"/>
-                                    <div class="col-md-3">Employee Code</div>
-                                    <input type="text"/>
-                                    <div class="col-md-3">Email Id</div>
-                                    <input type="text"/>
-                                    <div class="col-md-3">Contact Number</div>
-                                    <input type="text"/>
-                                    <br>
-                                    <button class="btn btn-primary">Save</button>
-                                </div>
-                            </div>
-                        </div>    
+                                    <div style="width:300px;margin:20px;">
+                                        <textfield label="Name">
+                                            <input textfield placeholder="name" class="gray-bg" />
+                                            
+                                        </textfield>
+                                    </div>
+                                    <div style="width:300px;margin:20px;">
+                                        <textfield label="Last Name">
+                                            <input textfield placeholder="Last Name" class="gray-bg" />
+                                            
+                                        </textfield>
+                                    </div>
+                                    <div style="width:300px;margin:20px;">
+                                        <textfield label="Employee Code">
+                                            <input textfield placeholder="Employee Code" class="gray-bg" />
+                                            
+                                        </textfield>
+                                    </div>
+                                    <div style="width:300px;margin:20px;">
+                                        <textfield label="Email ID">
+                                            <input textfield placeholder="Email ID" class="gray-bg" />
+                                            
+                                        </textfield>
+                                    </div>
+                                    <div style="width:300px;margin:20px;">
+                                        <textfield label="Contact Number" [required]="true">
+                                            <input textfield placeholder="Phone" class="gray-bg" />
+                                            
+                                        </textfield>
+                                    </div>
+                                </div>  
+                                <div class="btn">
+                                <button class="me-3"  ruibutton design="outlined" size="medium" color="secondary">Submit</button>
+                                <button class="me-3"  ruibutton design="outlined" size="medium" color="secondary">Cancel</button>
+                               </div>
                 </div>
             </div>
         </div>

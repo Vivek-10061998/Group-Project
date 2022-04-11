@@ -64,9 +64,9 @@
 
     <div class="notify-dropdown fix-width"> 
       <div class="" *ngIf="userIsAuthenticated">
-        <button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
+        <a href="profile"><button class="r-btn-outlined r-btn-small r-btn-secondary full-width justify-content-start border-none">
           <em class="bi bi-person me-2"> </em> View Profile
-        </button>
+        </button></a>
         <button class="r-btn-outlined r-btn-small r-btn-danger full-width justify-content-start border-none ms-0 mb-0" (click)="logout()">
           <em class="bi bi-power me-2"> </em> Logout
         </button>

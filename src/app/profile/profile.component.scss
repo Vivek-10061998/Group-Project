@@ -16,8 +16,15 @@
     margin-left: 250px;
     transition: margin-left 0.5s ease-in;
 }
-
-
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    display: inline-flex;
+    align-items: right;
+    justify-content: space-between;
+}
 
 // Xtra Small devices (feature phones, 240px and up)
 @media (min-width: 240px) { 
