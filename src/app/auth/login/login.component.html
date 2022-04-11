@@ -44,7 +44,7 @@
       <h2>Reliance Buyer Portal</h2>  
   </div>
     
-    <div class="card-body" *ngIf="!page">
+    <div class="card-body">
         <form class="needs-validation"
               novalidate
               (ngSubmit)="login(loginForm)"
@@ -107,53 +107,13 @@
             </div>
             <div>
               <span>Don't have a Buyer's Account? </span>
-              <span><a class="" (click)="pageChange()" style="color: blue; text-decoration: underline;">SignUp</a></span>
+              <span><a class="" href="signup" style="color: blue; text-decoration: underline;">SignUp</a></span>
             </div>
           </fieldset>
         </form>
         <div class="alert alert-danger"
              *ngIf="errorMessage">{{errorMessage}}</div>
       </div>
-      <div class="card-body" *ngIf="page">
-        <form class="form-group" (submit)="onSignUp(signUpForm)" 
-        #signUpForm="ngForm" *ngIf="!isLoading">
-            <fieldset>
-              <div class="text-center mt-4">
-                <h1 class="h2">Sign Up</h1>
-                <p class="lead">
-                  Kindly enter the details to signup
-                </p>
-              </div>
-            <div class="form-group row">
-                <div class="col-md-8">                    
-                    <input class="form-control"
-                    name=email 
-                    ngModel type="email" 
-                    placeholder="Email" 
-                    #emailInput="ngModel" 
-                    required/>                    
-                    <div *ngIf="emailInput.invalid && emailInput.dirty"><p style="color: red;">Please enter a valid email</p></div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-8">
-                    <input class="form-control"
-                    name=password 
-                    ngModel type="password" 
-                    placeholder="password" 
-                    #passwordInput="ngModel" 
-                    required/>
-                    <div *ngIf="passwordInput.invalid && passwordInput.dirty"><p style="color: red;">Please enter a valid password</p></div>
-                </div>
-            </div>
-            <button class="btn btn-primary">Sign Up</button>
-            <div>
-              <span>Already registered with us? </span>
-              <span><a class="" (click)="pageChange()" style="color: blue; text-decoration: underline;">Sign In instead</a></span>
-            </div>
-            </fieldset>
-        </form>
-    </div>
 </div>
 </body>
 

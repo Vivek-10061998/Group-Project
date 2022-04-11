@@ -12,7 +12,6 @@ export class LoginComponent{
     maskUserName: boolean=true;
     errorMessage="";
     isLoading=false;
-    page=false;
     constructor(private authService:AuthService, private router:Router){}
     login(loginForm:NgForm){
         console.log("Login successful" + loginForm.value)
@@ -23,17 +22,5 @@ export class LoginComponent{
         this.authService.login(loginForm.value.userName,loginForm.value.password)
         this.router.navigate(['/home'])
     }
-    onSignUp(form:NgForm)
-    {
-        if(form.invalid){
-            return;
-        }
-        this.isLoading=true;
-        this.authService.createUser(form.value.email,form.value.password)
-        this.pageChange();
-        this.router.navigate(['/login'])
-    }
-    pageChange(){
-        this.page=!this.page;
-    }
+    
 }

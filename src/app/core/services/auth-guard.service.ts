@@ -1,20 +1,29 @@
 import { Injectable, Inject } from '@angular/core';
-import { ActivatedRoute, CanLoad, Router, Route } from '@angular/router';
+import { ActivatedRoute, CanLoad, Router, Route, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from './auth.service';
 import { AppConfigService } from './app-config.service';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuardService implements CanLoad {
-
+  userIsAuthenticated=false;
   constructor(@Inject(DOCUMENT) private document: any,
     private activatedRoute: ActivatedRoute,
     private authService: AuthService, private router: Router,
     private appConfigService: AppConfigService) { }
-
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+      this.userIsAuthenticated=this.authService.getIsAuthenticated();
+      if(!this.userIsAuthenticated){
+        alert("Please Login First");
+        this.router.navigate(['/login'])
+      return false;
+      }
+      return true;
+    }
     canLoad(route: Route): Promise<boolean> {
     
       return new Promise<boolean>((resolve, reject) => {
