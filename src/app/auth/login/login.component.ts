@@ -30,6 +30,7 @@ export class LoginComponent{
         }
         this.isLoading=true;
         this.authService.createUser(form.value.email,form.value.password)
+        this.pageChange();
         this.router.navigate(['/login'])
     }
     pageChange(){

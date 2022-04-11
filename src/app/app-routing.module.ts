@@ -19,12 +19,6 @@ const routes: Routes = [
   {
     path: 'home', component:HomeComponent
   },
-  {
-    path: 'login', component: LoginComponent
-  },
-  {
-    path: 'signup', component: SignUpComponent
-  },
   
   {
     path: 'dashboard',
@@ -38,7 +32,7 @@ const routes: Routes = [
     path: 'session-timeout',
     loadChildren: () => import('src/app/core/components/session-timeout/session-timeout.module').then(m => m.SessionTimeoutModule)
   },
-  { path: '**', redirectTo: 'home' },
+  //{ path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

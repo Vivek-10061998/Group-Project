@@ -20,15 +20,16 @@ import * as $ from "jquery";
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth/signup/signup.component';
+import { LoginModule } from './auth/login.modules';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +37,7 @@ import { SignUpComponent } from './auth/signup/signup.component';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    LoginModule,
     AppRuiModule
   ],
   exports: [AppRuiModule],
