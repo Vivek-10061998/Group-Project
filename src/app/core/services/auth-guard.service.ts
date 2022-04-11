@@ -18,7 +18,7 @@ export class AuthGuardService implements CanLoad {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
       this.userIsAuthenticated=this.authService.getIsAuthenticated();
       if(!this.userIsAuthenticated){
-        alert("Please Login First");
+        
         this.router.navigate(['/login'])
       return false;
       }

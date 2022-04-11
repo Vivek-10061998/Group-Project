@@ -6,6 +6,67 @@
             <div class="card">
                 <div class="card-body">
                     <div class="'container-fluid">
+                        <tabs (tabChange)="selectionChange($event)">
+                            <tab tabTitle="Orders"> 
+                                <chip title="Orders" color="info" design="bordered"></chip>
+                                <chip title="Orders in process" color="info" design="bordered"></chip>
+                                <chip title="Annual Rate Contract" color="info" design="bordered"></chip>
+                                <br><br>
+                                <div>
+                                    <input class="input is-medium" placeholder="Search..." [formControl]="control" [appAutocomplete]="autocomplete">
+                                
+                                    <app-autocomplete #autocomplete="appAutocomplete">
+                                        <ng-template appAutocompleteContent>
+                                            <ng-container *ngIf="(options | filter: control.value) as result">
+                                                <app-option *ngFor="let option of result" [value]="option.label">
+                                                    {{ option.label }}
+                                                </app-option>
+                                                <app-option class="no-result" *ngIf="!result.length">No result...</app-option>
+                                            </ng-container>
+                                        </ng-template>
+                                    </app-autocomplete>
+                                </div>
+                                <div class="col-md-3">
+                                    
+                                    <card outline="bordered" background="white" borderColor="#dee2e6">
+                                        <h6>Vendor Name</h6>
+                                        <h6>Spend</h6>
+                                        <h6 style="color:#2352a9">1.61 B</h6>
+                                    </card>
+                                </div> </tab>
+                            <tab tabTitle="Measurement sheet"> <chip title="Unit Rate Based MS(3)" color="info" size="large"></chip>
+                                <br><br>
+                                    <div>
+                                        <input class="input is-medium" placeholder="Search..." [formControl]="control" [appAutocomplete]="autocomplete">
+                                    
+                                        <app-autocomplete #autocomplete="appAutocomplete">
+                                            <ng-template appAutocompleteContent>
+                                                <ng-container *ngIf="(options | filter: control.value) as result">
+                                                    <app-option *ngFor="let option of result" [value]="option.label">
+                                                        {{ option.label }}
+                                                    </app-option>
+                                                    <app-option class="no-result" *ngIf="!result.length">No result...</app-option>
+                                                </ng-container>
+                                            </ng-template>
+                                        </app-autocomplete>
+                                    </div>
+                                    <div class="col-md-3">
+                                       
+                                        <card outline="bordered" background="white" borderColor="#dee2e6">
+                                            <h6>Vendor Name</h6>
+                                            <h6>Spend</h6>
+                                            <h6 style="color:#2352a9">1.61 B</h6>
+                                        </card>
+                                    </div></tab>
+                            <tab tabTitle="Shipment">  </tab>
+                            <tab tabTitle="Payments">  </tab>
+                        </tabs>
+                        
+                        <!-- <tabs [selectedTab]="1" (tabChange)="selectionChange($event)">
+                            <tab tabTitle="Header Tab"> Header Details </tab>
+                            <tab tabTitle="Item Tab"> Item Details </tab>
+                            <tab tabTitle="Transportation Tab"> Transportation Details </tab>
+                        </tabs> -->
                     </div>
                 </div>
             </div>

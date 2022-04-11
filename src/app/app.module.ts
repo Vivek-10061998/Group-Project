@@ -23,6 +23,7 @@ import { SignUpComponent } from './auth/signup/signup.component';
 import { LoginModule } from './auth/login.modules';
 import { ProfileComponent } from './profile/profile.component';
 import { OrderComponent } from './order/order.component';
+import { FilterPipe } from './core/lib/core';
 
 
 
@@ -31,7 +32,8 @@ import { OrderComponent } from './order/order.component';
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    OrderComponent
+    OrderComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
